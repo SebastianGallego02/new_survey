@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { logout_user } from "../utils/api";
-import logo from '../assets/LOGO LIZEth BARBOSA.svg';
+import logo from '../assets/LOGO LIZETH BARBOSA.svg';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
