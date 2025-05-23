@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Varela+Round&display=swap');
+@import "tailwindcss";
+
+
+@theme {
+  --font-sans: "Roboto", sans-serif;
+  --font-display: "Varela Round", sans-serif;
+  --font-weight-sans: 100;
+  --font-weight-display: 100;
+
+
+  --animate-marquee: marquee 25s linear infinite;
+  --animate-marquee-right: marquee-right 25s linear infinite;
+
+  --animate-reveal: reveal 3s ease-out infinite;
+  --animate-shimmer: shimmer 3s linear infinite;
+
+  @keyframes shimmer {
+    0% { transform: translateX(0%) skewX(-12deg); }
+    50% { transform: translateX(100%) skewX(-12deg); }
+    100% { transform: translateX(0%) skewX(-12deg); }
+  }
+  
+  @keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
+  }
+  
+  @keyframes marquee-right {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(0%); }
+  }
+
+  @keyframes reveal {
+    0%   { width: 0%; opacity: 1; }
+    80%  { width: 100%; opacity: 1; }
+    100% { width: 100%; opacity: 0; }
+  }
+
+}
+
+@keyframes whiteBlurFade {
+  0% {
+    backdrop-filter: blur(12px);  /* Starting blur (md) */
+    background-color: rgba(0, 0, 0, 1);  /* white/10 */
+  }
+
+  60% {
+    backdrop-filter: blur(12px);  /* Starting blur (md) */
+    background-color: rgba(0, 0, 0, 0.7);  /* white/10 */
+  }
+
+  100% {
+    backdrop-filter: blur(0px);   /* Ending with no blur */
+    background-color: rgba(0, 0, 0, 0);    /* white/0 */
+  }
+}
+
+@layer utilities {
+  .animate-white-blur {
+    animation: whiteBlurFade 7s linear forwards;
+  }
+}
+
+html, body, #root {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+}
+
+html,
+body {
+  @apply bg-white dark:bg-gray-950;
+
+  @media (prefers-color-scheme: dark) {
+    color-scheme: dark;
+  }
+}
+
+
+
+.custom-scrollbar {
+  scrollbar-color: #999 #f0f0f0;
+  overflow-x: auto; 
+  pointer-events: none;
+}
+
+
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+
+.backdrop-blur-xs {
+  backdrop-filter: blur(1px);
+}
+
+
+
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+/* button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+} */
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  /* button {
+    background-color: #f9f9f9;
+  } */
+}
+

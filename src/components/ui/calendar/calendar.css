@@ -1,0 +1,53 @@
+iv.rbc-calendar div.rbc-toolbar span.rbc-btn-group button {
+  text-transform: capitalize;
+}
+
+.rbc-toolbar-label {
+  text-transform: capitalize;
+}
+
+.rbc-header span {
+  text-transform: capitalize;
+}
+
+.rbc-time-view .rbc-time-gutter .rbc-timeslot-group {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-center; /* Aligns content to the bottom */
+}
+
+/* --------------------- */
+.rbc-toolbar {
+  display: grid !important;
+  grid-template-columns: 1fr auto 1fr !important; /* Left | Center | Right */
+  align-items: center !important;
+  width: 100% !important;
+  min-width: 0 !important;
+}
+
+/* Left button group (aligns to start) */
+.rbc-btn-group:first-child {
+  justify-self: start !important;
+  display: inline-flex !important;
+}
+
+/* Centered label (exact middle) */
+.rbc-toolbar-label {
+  justify-self: center !important;
+  text-align: center !important;
+  white-space: nowrap !important;
+  padding: 0 8px !important;
+}
+
+/* Right button group (aligns to end) */
+.rbc-btn-group:last-child {
+  justify-self: end !important;
+  display: inline-flex !important;
+}
+
+/* Button styles */
+.rbc-btn-group button {
+  flex-shrink: 0 !important;
+  padding: 6px 12px !important;
+}
+

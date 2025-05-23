@@ -1,0 +1,189 @@
+.embla {
+  max-width: 100%;
+  margin: auto;
+  --slide-height: 19rem;
+  --slide-spacing: 1rem;
+  --slide-size: 70%;
+}
+.embla__viewport {
+  overflow: hidden;
+}
+.embla__container {
+  display: flex;
+  touch-action: pan-y pinch-zoom;
+  margin-left: calc(var(--slide-spacing) * -1);
+}
+.embla__slide {
+  transform: translate3d(0, 0, 0);
+  flex: 0 0 var(--slide-size);
+  max-width: 45%;
+  padding-left: var(--slide-spacing);
+}
+
+.embla__slide_photo {
+  flex: 0 0 170px;
+  height: 225px; /* Fixed height */
+  border-radius: 12px; /* Rounded corners */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: var(--slide-spacing);
+}
+
+.embla__slide__number_photo {
+  border-radius: 1.8rem;
+  font-size: 4rem;
+  font-weight: 600;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+  box-shadow: inset 0 0 0 0.1rem rgb(234, 234, 234); /* --detail-medium-contrast */
+  color: rgb(54, 49, 61); /* --text-body */
+  background-color: white; /* --background-site */
+}
+
+.embla__controls_photo {
+  display: none;
+  justify-content: center; /* Center horizontally */
+  margin-top: 1.8rem;
+}
+
+.embla__slide__number {
+  border-radius: 1.8rem;
+  font-size: 4rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: var(--slide-height);
+  user-select: none;
+  box-shadow: inset 0 0 0 0.1rem rgb(234, 234, 234); /* --detail-medium-contrast */
+  color: rgb(54, 49, 61); /* --text-body */
+  background-color: white; /* --background-site */
+}
+
+/* Controls - Positioning Only */
+
+.embla__buttons {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.6rem;
+  align-items: center;
+}
+
+/* Buttons - Using RGB Colors */
+.embla__button {
+  -webkit-tap-highlight-color: rgba(49, 49, 49, 0.5); /* --text-high-contrast with 0.5 opacity */
+  appearance: none;
+  touch-action: manipulation;
+  display: inline-flex;
+  text-decoration: none;
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  margin: 0; 
+  width: 3.6rem;
+  height: 3.6rem;
+  z-index: 1;
+  border-radius: 50%;
+  color: rgb(54, 49, 61); /* --text-body */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.embla__button:hover {
+  background-color: rgb(240, 240, 242); /* --detail-low-contrast */
+}
+
+.embla__button:disabled {
+  color: rgb(192, 192, 192); /* --detail-high-contrast */
+  cursor: not-allowed;
+}
+
+.embla__button__svg {
+  width: 35%;
+  height: 35%;
+  fill: currentColor;
+}
+
+
+.embla__controls {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  margin-top: 1.8rem;
+}
+
+.embla__dots {
+  display: flex;
+  gap: 0.8rem; /* Space between dots */
+  align-items: center;
+}
+
+/* Keep your existing dot styles */
+.embla__dot {
+  -webkit-tap-highlight-color: rgba(49, 49, 49, 0.5);
+  appearance: none;
+  background-color: transparent;
+  touch-action: manipulation;
+  display: inline-flex;
+  text-decoration: none;
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.embla__dot:after {
+  background-color: rgb(249, 249, 249);
+  box-shadow: inset 0 0 0 0.1rem rgb(234, 234, 234);
+  width: 1.4rem;
+  height: 1.4rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  content: '';
+  transition: all 0.2s ease;
+}
+
+.embla__dot--selected:after {
+  background-color: rgb(54, 49, 61);
+  box-shadow: inset 0 0 0 0.2rem rgb(54, 49, 61);
+}
+
+.embla__dot:hover:after {
+  background-color: rgb(240, 240, 242);
+}
+
+/* Dark Theme Overrides */
+.theme-dark .embla__slide__number,
+.theme-dark .embla__button,
+.theme-dark .embla__dot:after {
+  background-color: rgb(0, 0, 0); /* --background-site (dark) */
+  color: rgb(222, 222, 222); /* --text-body (dark) */
+  box-shadow: inset 0 0 0 0.2rem rgb(25, 25, 25); /* --detail-medium-contrast (dark) */
+}
+
+.theme-dark .embla__button:hover,
+.theme-dark .embla__dot:hover:after {
+  background-color: rgb(21, 21, 21); /* --detail-low-contrast (dark) */
+}
+
+.theme-dark .embla__button:disabled {
+  color: rgb(101, 101, 101); /* --detail-high-contrast (dark) */
+}
+
+.theme-dark .embla__dot--selected:after {
+  background-color: rgb(222, 222, 222); /* --text-body (dark) */
+  box-shadow: inset 0 0 0 0.2rem rgb(222, 222, 222); /* --text-body (dark) */
+}

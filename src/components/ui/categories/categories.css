@@ -1,0 +1,54 @@
+.carousel-track {
+    display: flex;
+    gap: 2rem;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    padding: 1rem 0;
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+  
+  
+  .carousel-slide {
+    flex: 0 0 auto;
+    width: 250px; /* Adjust based on your needs */
+    scroll-snap-align: start;
+    text-align: center;
+  }
+  
+  .carousel-prev, .carousel-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    background: white;
+    border-radius: 50%;
+    border: 1px solid #ddd;
+    cursor: pointer;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+  }
+  
+  .carousel-prev {
+    left: -5px;
+  }
+  
+  .carousel-next {
+    right: -5px;
+  }
+  
+  /* Hide scrollbar */
+  .carousel-track::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .carousel-track {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
