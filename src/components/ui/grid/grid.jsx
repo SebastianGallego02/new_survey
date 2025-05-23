@@ -1,5 +1,5 @@
 import React from "react";
-import ErrorBoundary from "../../../hooks/ErrorBoundery";
+import ErrorBoundary from "../../../hooks/errorBoundery";
 
 export const GridBoard = () => {
   return (

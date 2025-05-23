@@ -1,5 +1,5 @@
 import React from "react";
-import ErrorBoundary from "../../hooks/ErrorBoundery";
+import ErrorBoundary from "../../hooks/errorBoundery";
 import NavbarUser from "../../header/navbarUser";
 import OnBoardingHome from "./onBoardingHome";
 

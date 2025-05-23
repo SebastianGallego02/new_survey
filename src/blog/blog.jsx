@@ -1,5 +1,5 @@
 import { LoremIpsum } from "lorem-ipsum";
-import ErrorBoundary from "../hooks/ErrorBoundery";
+import ErrorBoundary from "../hooks/errorBoundery";
 
 const lorem = new LoremIpsum({
   sentencesPerParagraph: {

@@ -1,6 +1,6 @@
 import React from "react";
 import { LoremIpsum } from "lorem-ipsum";
-import ErrorBoundary from "../hooks/ErrorBoundery";
+import ErrorBoundary from "../hooks/errorBoundery";
 import Carousel from "../components/ui/carousel/photos/carouselMod";
 
 // Constants for slide count and slides

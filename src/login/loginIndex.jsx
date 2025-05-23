@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Login from "./login";
 
-import ErrorBoundary from "../hooks/ErrorBoundery";
+import ErrorBoundary from "../hooks/errorBoundery";
 import Navbar from "../header/navbar";
 
 

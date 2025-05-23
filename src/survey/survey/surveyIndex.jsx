@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import Survey from "./survey";
-import ErrorBoundary from "../../hooks/ErrorBoundery";
+import ErrorBoundary from "../../hooks/errorBoundery";
 import NavbarUser from "../../header/navbarUser";
 
 export default function SurveyIndex() {

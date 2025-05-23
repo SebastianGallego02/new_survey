@@ -3,7 +3,7 @@ import { Calendar as BigCalendar, dateFnsLocalizer } from 'react-big-calendar';
 import { format, getDay, parse, startOfWeek } from 'date-fns';
 import { es } from 'date-fns/locale';
 import { events } from './events';
-import ErrorBoundary from '../../../hooks/ErrorBoundery';
+import ErrorBoundary from '../../../hooks/errorBoundery';
 
 const localizer = dateFnsLocalizer({
   format: (date, formatString) => format(date, formatString, { locale: es }),

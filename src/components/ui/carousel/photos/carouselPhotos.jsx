@@ -1,6 +1,6 @@
 import React from "react";
 import CarouselMod from "./carouselMod";
-import ErrorBoundary from "../../../../hooks/ErrorBoundery";
+import ErrorBoundary from "../../../../hooks/errorBoundery";
 import { LoremIpsum } from "lorem-ipsum";
 
 const lorem = new LoremIpsum({

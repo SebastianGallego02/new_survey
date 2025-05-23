@@ -1,6 +1,6 @@
 import React, { useRef, useState, useEffect } from "react";
 import { labels } from "./categoriesLabels";
-import ErrorBoundary from "../../../hooks/ErrorBoundery";
+import ErrorBoundary from "../../../hooks/errorBoundery";
 
 export default function Categories() {
   const trackRef = useRef(null);

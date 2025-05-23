@@ -3,7 +3,7 @@ import { useForm, Controller } from "react-hook-form";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons";
 import * as yup from "yup";
-import ErrorBoundary from "../hooks/ErrorBoundery";
+import ErrorBoundary from "../hooks/errorBoundery";
 import { useAuth } from "../context/useAuth";
 
 const loginSchema = yup.object({
